@@ -1,5 +1,22 @@
 {% extends "layout.html" %}
 
 {% block body %}
-    <h1>Hello World</h1>
+<div>
+    <form action="/action_page.php">
+            <label for="Company">Company Name</label><br>
+            <select id="country" name="Company">
+                <option value="google">Google</option>
+                <option value="tesla">Tesla</option>
+                <option value="meta">Meta</option>
+            </select> <br><br>
+        
+            <label for="start">start-date</label>
+            <input type="date" id="start" name="start" > <br><br>
+        
+            <label for="end">end-date</label>
+            <input type="date" id="start" name="end"> <br><br>           
+
+            <input type="submit" value="Submit">
+    </form>
+</div>
 {% endblock %}
