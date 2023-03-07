@@ -1,43 +1,70 @@
-html{
-    background-color: rgba(0, 0, 0, 0.853);
-    color: white;
-
+html {
+	background-color: rgba(0, 0, 0, 0.853);
+	color: white;
 }
-input[type=text], select {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  input[type=submit] {
-    width: 50%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: green;
-  }
-  
-  div {
-    width: 40%;
-    margin: auto;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    color: black;
-    padding: 20px;
-  }
-  label{
-    font-weight: bold;
-    font-size: 108%;
-  }
+
+body {
+  margin: 0;
+	height: 100vh;
+	display: grid;
+}
+
+input[type="text"],
+select {
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type="date"] {
+	width: 50%;
+	padding: 12px 20px;
+	margin: auto;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type="submit"] {
+	width: 50%;
+	background-color: #4caf50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: green;
+}
+
+label {
+	font-weight: bold;
+	font-size: 108%;
+}
+
+.form-container {
+	align-self: center;
+	display: grid;
+	justify-items: center;
+	width: 40%;
+	margin: auto;
+
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	color: black;
+	padding: 20px;
+}
+.form-container-group {
+	display: grid;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}

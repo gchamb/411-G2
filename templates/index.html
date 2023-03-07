@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block body %}
+
+<form class="form-container" action="/results" method="POST">
+	<div class="form-container-group">
+		<label for="Company">Stock Ticker</label>
+		<input type="text" id="Cname" name="Cname" />
+	</div>
+
+	<div class="form-container-group">
+		<label for="start">Date</label>
+		<input type="date" id="start" name="start" />
+	</div>
+
+	<input type="submit" value="Submit" />
+</form>
+
+{% endblock %}
