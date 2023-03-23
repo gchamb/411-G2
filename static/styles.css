@@ -1,70 +1,76 @@
-html {
-	background-color: rgba(0, 0, 0, 0.853);
-	color: white;
+:root {
+  color-scheme: light dark;
+
+  --dark-bg-color: rgb(0, 41, 55);
+  --light-bg-color: rgb(144, 223, 250);
 }
 
 body {
+  display: grid;
   margin: 0;
-	height: 100vh;
-	display: grid;
-}
-
-input[type="text"],
-select {
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-}
-
-input[type="date"] {
-	width: 50%;
-	padding: 12px 20px;
-	margin: auto;
-	text-align: center;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-}
-
-input[type="submit"] {
-	width: 50%;
-	background-color: #4caf50;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
-input[type="submit"]:hover {
-	background-color: green;
-}
-
-label {
-	font-weight: bold;
-	font-size: 108%;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .form-container {
-	align-self: center;
-	display: grid;
-	justify-items: center;
-	width: 40%;
-	margin: auto;
+  align-self: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.3fr;
+  gap: 1rem;
+  justify-items: center;
+  width: 20%;
+  margin: auto;
 
-	border-radius: 5px;
-	background-color: #f2f2f2;
-	color: black;
-	padding: 20px;
+  border-radius: 5px;
+  color: black;
+  padding: 20px;
 }
+
 .form-container-group {
-	display: grid;
-	width: 50%;
-	margin: auto;
-	text-align: center;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+select,
+input[type="date"] {
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+}
+
+button {
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: light) {
+  .form-container {
+    background-color: var(--dark-bg-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .form-container {
+    background-color: var(--light-bg-color);
+  }
+}
+
+@media (max-width: 500px) {
+  .form-container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .form-container {
+    width: 50%;
+  }
 }
