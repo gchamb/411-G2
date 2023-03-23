@@ -20,6 +20,7 @@ def results():
     # validate ticker
     with open('stocks.json','r') as file:
         list = json.loads(file.read())
+        file.close()
 
     if ticker not in list:
         return ('', 204) # empty HTTP response
