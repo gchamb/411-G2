@@ -10,15 +10,14 @@ def index():
     
 @app.route('/results', methods=['POST'])
 def results():
-    Cname = (request.form['Cname']) 
-    Cname_result = Cname
+    ticker = request.form['ticker']
 
-    Date = (request.form['start'])
-    return render_template('results.html', result= Cname_result + " " + Date) 
+    date = request.form['start']
+    return render_template('results.html', result=ticker + " " + date) 
 
 
     
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
