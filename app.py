@@ -14,7 +14,7 @@ def index():
     
 @app.route('/results', methods=['POST'])
 def results():
-    ticker = (request.form['Cname']) 
+    ticker = (request.form['ticker']) 
     dateStr = request.form['start']
 
     # validate ticker
