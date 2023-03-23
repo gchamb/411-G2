@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html')
     
@@ -16,37 +17,21 @@ def results():
     ticker = (request.form['Cname']) 
     dateStr = request.form['start']
 
-    print(ticker)
-    print(dateStr)
-
     # validate ticker
     with open('stocks.json','r') as file:
-        l = json.loads(file.read())
+        list = json.loads(file.read())
 
-    found = False
-    for t in l:
-        print(t)
-        print(t == ticker)
-        print(type(t))
-        print(type(ticker))
-        if t == ticker:
-            found = True
-            break
-
-    if not found:
-        return "Bad ticker" #
+    if ticker not in list:
+        return ('', 204) # empty HTTP response
 
     # load model
     model = pickle.load(open(f'./models/{ticker}-model.pkl','rb'))
     
     # predict
     date = dt.datetime.fromisoformat(dateStr).toordinal()
-    print(date)
     prediction = model.predict([[date]])
-    print(prediction[0][0])
 
     return render_template('results.html', ticker = ticker, date = dateStr, price = prediction[0][0]) 
-
 
     
 
