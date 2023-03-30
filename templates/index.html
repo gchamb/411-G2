@@ -1,17 +1,17 @@
 {% extends "layout.html" %} {% block body %}
 
 <form class="form-container" action="/results" method="POST">
-	<div class="form-container-group">
-		<label for="Company">Stock Ticker</label>
-		<input type="text" id="ticker" name="ticker" />
-	</div>
+  <div class="form-container-group">
+    <label for="ticker">Ticker</label>
+    <select id="ticker" name="ticker"></select>
+  </div>
 
-	<div class="form-container-group">
-		<label for="start">Date</label>
-		<input type="date" id="start" name="start" />
-	</div>
+  <div class="form-container-group">
+    <label for="start">Date</label>
+    <input type="date" id="start" name="start" />
+  </div>
 
-	<input type="submit" value="Submit" />
+  <button type="submit">Submit</button>
 </form>
 
 {% endblock %}

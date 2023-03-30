@@ -22,7 +22,7 @@ def results():
         list = json.loads(file.read())
         file.close()
 
-    if ticker not in list:
+    if ticker not in list or dateStr == '':
         return ('', 204) # empty HTTP response
 
     # load model
@@ -30,9 +30,9 @@ def results():
     
     # predict
     date = dt.datetime.fromisoformat(dateStr).toordinal()
-    prediction = model.predict([[date]])
+    prediction = round(model.predict([[date]])[0][0], 2)
 
-    return render_template('results.html', ticker = ticker, date = dateStr, price = prediction[0][0]) 
+    return render_template('results.html', ticker = ticker, date = dateStr, price = prediction) 
 
     
 
