@@ -1,7 +1,6 @@
 :root {
   color-scheme: light dark;
 
-  --dark-bg-color: rgb(0, 41, 55);
   --light-bg-color: rgb(144, 223, 250);
 }
 
@@ -24,6 +23,7 @@ body {
   border-radius: 5px;
   color: black;
   padding: 20px;
+  background-color: var(--light-bg-color);
 }
 
 .form-container-group {
@@ -33,6 +33,10 @@ body {
   width: 100%;
   margin: auto;
   text-align: center;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 select,
@@ -49,18 +53,6 @@ button {
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-@media (prefers-color-scheme: light) {
-  .form-container {
-    background-color: var(--dark-bg-color);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .form-container {
-    background-color: var(--light-bg-color);
-  }
 }
 
 @media (max-width: 500px) {
