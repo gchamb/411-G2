@@ -14,4 +14,6 @@ async function loadTickers() {
   }
 }
 
-loadTickers();
+if (window.location.pathname === "/") {
+  loadTickers();
+}
