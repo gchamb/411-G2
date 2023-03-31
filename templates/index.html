@@ -1,5 +1,7 @@
 {% extends "layout.html" %} {% block body %}
 
+
+<div class="main">
 <form class="form-container" action="/results" method="POST">
   <div class="form-container-group">
     <label for="ticker">Ticker</label>
@@ -13,5 +15,6 @@
 
   <button type="submit">Submit</button>
 </form>
+</div>
 
 {% endblock %}

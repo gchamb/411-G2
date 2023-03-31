@@ -2,13 +2,49 @@
   color-scheme: light dark;
 
   --light-bg-color: rgb(144, 223, 250);
+
 }
 
 body {
   display: grid;
   margin: 0;
-  height: 100vh;
+  height: 65vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ticker{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.scroll-text{
+  width: 76%;
+  text-align: center;
+  background-color: rgb(2, 2, 86);
+  color: white;
+  padding: 0 2%;
+  
+}
+
+.title{
+  width: 20%;
+  text-align: center;
+  background-color: rgb(2, 2, 86);
+  color: var(--light-bg-color);
+
+  overflow: auto;
+  
+}
+a:visited{
+  color: var(--light-bg-color);
+}
+
+.main{
+  display: grid;
+  place-items: center;
 }
 
 .form-container {
@@ -24,6 +60,7 @@ body {
   color: black;
   padding: 20px;
   background-color: var(--light-bg-color);
+  
 }
 
 .form-container-group {
@@ -66,3 +103,8 @@ button {
     width: 50%;
   }
 }
+
+
+
+
+

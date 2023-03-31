@@ -11,8 +11,24 @@
     />
   </head>
   <body>
-    {% block body %}{% endblock %}
+    <div class = "ticker">
+      <div class=" title"> <h5> <a href = '/index' > Stock Prediction: </a></h5></div>
+      <div class="scroll-text ">
+        <marquee>
+          <p>
+            A valuable tool for investors, a tool which can help you to invest in the stock market. 
+            It can help you make more informed decisions about which stock to buy, sell, or hold.
+            It analyzes historical finanical data which helps to predict the stock price. It's a 
+            great tool for all (beginners or stock market professionals).
+          </p>
+        </marquee>
+      </div>
+    </div>
+    {% block body %}
+    {% endblock %}
 
+
+    
     <script src="{{ url_for('static', filename='main.js') }}"></script>
   </body>
 </html>
